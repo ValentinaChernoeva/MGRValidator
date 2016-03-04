@@ -38,6 +38,7 @@
                            return [NSNumber numberWithBool:[currentPassword isEqualToString:currentConfirmPassword]
                                    && [self.confirmPasswordField.validator isValidValue:currentConfirmPassword]];
                        }] subscribeNext:^(NSNumber *passwordsMatch) {
+                           self.signupButton.enabled = passwordsMatch.boolValue && [self.emailField.validator isValidValue:self.emailField.text];
                            [self validationObject:self.confirmPasswordField didChangeValueWithValidationResault:passwordsMatch.boolValue];
                        }];
 }
