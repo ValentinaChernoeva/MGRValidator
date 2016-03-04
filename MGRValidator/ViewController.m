@@ -38,13 +38,13 @@
                            return [NSNumber numberWithBool:[currentPassword isEqualToString:currentConfirmPassword]
                                    && [self.confirmPasswordField.validator isValidValue:currentConfirmPassword]];
                        }] subscribeNext:^(NSNumber *passwordsMatch) {
-                           [self validationObject:self.confirmPasswordField didChangeStringWithValidationResault:passwordsMatch.boolValue];
+                           [self validationObject:self.confirmPasswordField didChangeValueWithValidationResault:passwordsMatch.boolValue];
                        }];
 }
 
 #pragma mark - MGRValidationDelegate
 
-- (void)validationObject:(UITextField *)object didChangeStringWithValidationResault:(BOOL)validationResault {
+- (void)validationObject:(UITextField *)object didChangeValueWithValidationResault:(BOOL)validationResault {
     if (validationResault) {
         object.backgroundColor = [UIColor clearColor];
     } else {

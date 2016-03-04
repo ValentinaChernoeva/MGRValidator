@@ -20,6 +20,6 @@
 @protocol MGRValidationObjectDelegate <NSObject>
 
 @optional
-- (void)validationObject:(id)object didChangeStringWithValidationResault:(BOOL)validationResault;
+- (void)validationObject:(id)object didChangeValueWithValidationResault:(BOOL)validationResault;
 
 @end

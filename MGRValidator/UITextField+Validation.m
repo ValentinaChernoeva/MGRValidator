@@ -36,9 +36,9 @@
 #pragma mark - RAC
 
 - (void)validationValue:(NSString *)value {
-    if (self.validationDelegate != nil && [self.validationDelegate respondsToSelector:@selector(validationObject:didChangeStringWithValidationResault:)]) {
+    if (self.validationDelegate != nil && [self.validationDelegate respondsToSelector:@selector(validationObject:didChangeValueWithValidationResault:)]) {
         BOOL validationResault = [self.validator isValidValue:value];
-        [self.validationDelegate validationObject:self didChangeStringWithValidationResault:validationResault];
+        [self.validationDelegate validationObject:self didChangeValueWithValidationResault:validationResault];
     }
 }
 @end
