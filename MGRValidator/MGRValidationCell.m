@@ -8,10 +8,6 @@
 
 #import "MGRValidationCell.h"
 
-@interface MGRValidationCell ()
-
-@end
-
 @implementation MGRValidationCell
 
 @end
