@@ -11,7 +11,7 @@
 
 @implementation MGRStringValidator
 
-- (instancetype)initWithregularExpression:(NSRegularExpression *)regularExpression
+- (instancetype)initWithRegularExpression:(NSRegularExpression *)regularExpression
                                 minLength:(NSInteger)minLength
                                 maxLength:(NSInteger)maxLength {
     self = [super init];
@@ -23,16 +23,16 @@
     return self;
 }
 
-- (instancetype)initWithregularExpression:(NSRegularExpression *)regularExpression {
-    return [self initWithregularExpression:regularExpression minLength:0 maxLength:0];
+- (instancetype)initWithRegularExpression:(NSRegularExpression *)regularExpression {
+    return [self initWithRegularExpression:regularExpression minLength:0 maxLength:0];
 }
 
 + (instancetype)emailValidator {
-    return [[self alloc] initWithregularExpression:[NSRegularExpression emailRegex] minLength:3 maxLength:256];
+    return [[self alloc] initWithRegularExpression:[NSRegularExpression emailRegex] minLength:3 maxLength:256];
 }
 
 + (instancetype)passwordValidator {
-    return [[self alloc] initWithregularExpression:[NSRegularExpression passwordRegex] minLength:5 maxLength:20];
+    return [[self alloc] initWithRegularExpression:[NSRegularExpression passwordRegex] minLength:5 maxLength:20];
 }
 
 #pragma mark - MGRValidationProtocol

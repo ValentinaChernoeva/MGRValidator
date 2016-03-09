@@ -15,11 +15,11 @@
 @property (assign, nonatomic) NSInteger minLength;
 @property (assign, nonatomic) NSInteger maxLength;
 
-- (instancetype)initWithregularExpression:(NSRegularExpression *)regularExpression
+- (instancetype)initWithRegularExpression:(NSRegularExpression *)regularExpression
                                 minLength:(NSInteger)minLength
                                 maxLength:(NSInteger)maxLength;
 
-- (instancetype)initWithregularExpression:(NSRegularExpression *)regularExpression;
+- (instancetype)initWithRegularExpression:(NSRegularExpression *)regularExpression;
 
 + (instancetype)emailValidator;
 + (instancetype)passwordValidator;

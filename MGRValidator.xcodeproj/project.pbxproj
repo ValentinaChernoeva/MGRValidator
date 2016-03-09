@@ -18,6 +18,9 @@
 		A7A106431C884F1A00C6DBFC /* NSRegularExpression+Patterns.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A106401C884F1A00C6DBFC /* NSRegularExpression+Patterns.m */; };
 		A7A106441C884F1A00C6DBFC /* UITextField+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A106421C884F1A00C6DBFC /* UITextField+Validation.m */; };
 		A7A1064B1C884F5E00C6DBFC /* MGRStringValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1064A1C884F5E00C6DBFC /* MGRStringValidator.m */; };
+		A7A106511C8959A200C6DBFC /* MGRValidationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A106501C8959A200C6DBFC /* MGRValidationCell.m */; };
+		A7A106561C895BE600C6DBFC /* MGRValidationCell+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A106551C895BE600C6DBFC /* MGRValidationCell+Validation.m */; };
+		A7A106591C8FEB5E00C6DBFC /* MGRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A106581C8FEB5E00C6DBFC /* MGRTableViewController.m */; };
 		FB67131796E34922977E4F06 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207ABA99E53C75E235D43682 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,12 @@
 		A7A106471C884F3F00C6DBFC /* MGRValidationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGRValidationProtocol.h; sourceTree = "<group>"; };
 		A7A106491C884F5E00C6DBFC /* MGRStringValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRStringValidator.h; sourceTree = "<group>"; };
 		A7A1064A1C884F5E00C6DBFC /* MGRStringValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRStringValidator.m; sourceTree = "<group>"; };
+		A7A1064F1C8959A200C6DBFC /* MGRValidationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRValidationCell.h; sourceTree = "<group>"; };
+		A7A106501C8959A200C6DBFC /* MGRValidationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRValidationCell.m; sourceTree = "<group>"; };
+		A7A106541C895BE600C6DBFC /* MGRValidationCell+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGRValidationCell+Validation.h"; sourceTree = "<group>"; };
+		A7A106551C895BE600C6DBFC /* MGRValidationCell+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGRValidationCell+Validation.m"; sourceTree = "<group>"; };
+		A7A106571C8FEB5E00C6DBFC /* MGRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRTableViewController.h; sourceTree = "<group>"; };
+		A7A106581C8FEB5E00C6DBFC /* MGRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRTableViewController.m; sourceTree = "<group>"; };
 		B55527D4E01E12353338B2A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7C87B331A75EE45AF5C5F08 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A7A106481C884F4500C6DBFC /* Utilits */,
+				A7A106521C8959C500C6DBFC /* Cells */,
 				A7A106451C884F2000C6DBFC /* Categories */,
 				A7A1064C1C884F6400C6DBFC /* Validators */,
 				A7A1064D1C884F7800C6DBFC /* ViewControllers */,
@@ -175,6 +185,8 @@
 				A7A106401C884F1A00C6DBFC /* NSRegularExpression+Patterns.m */,
 				A7A106411C884F1A00C6DBFC /* UITextField+Validation.h */,
 				A7A106421C884F1A00C6DBFC /* UITextField+Validation.m */,
+				A7A106541C895BE600C6DBFC /* MGRValidationCell+Validation.h */,
+				A7A106551C895BE600C6DBFC /* MGRValidationCell+Validation.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -202,8 +214,19 @@
 			children = (
 				A7A106121C884EFE00C6DBFC /* ViewController.h */,
 				A7A106131C884EFE00C6DBFC /* ViewController.m */,
+				A7A106571C8FEB5E00C6DBFC /* MGRTableViewController.h */,
+				A7A106581C8FEB5E00C6DBFC /* MGRTableViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A7A106521C8959C500C6DBFC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A7A1064F1C8959A200C6DBFC /* MGRValidationCell.h */,
+				A7A106501C8959A200C6DBFC /* MGRValidationCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		DC7F0C8141ED5DB498C17CCD /* Pods */ = {
@@ -397,12 +420,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A106561C895BE600C6DBFC /* MGRValidationCell+Validation.m in Sources */,
 				A7A106431C884F1A00C6DBFC /* NSRegularExpression+Patterns.m in Sources */,
 				A7A106441C884F1A00C6DBFC /* UITextField+Validation.m in Sources */,
 				A7A106141C884EFE00C6DBFC /* ViewController.m in Sources */,
 				A7A106111C884EFE00C6DBFC /* AppDelegate.m in Sources */,
 				A7A1064B1C884F5E00C6DBFC /* MGRStringValidator.m in Sources */,
 				A7A1060E1C884EFE00C6DBFC /* main.m in Sources */,
+				A7A106511C8959A200C6DBFC /* MGRValidationCell.m in Sources */,
+				A7A106591C8FEB5E00C6DBFC /* MGRTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
